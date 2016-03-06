@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartViewController" customModule="Speaker_Recognizer" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomContainerView" destination="eUv-Mh-jK1" id="2AO-GS-h6F"/>
+                <outlet property="femaleIconView" destination="hwG-Qs-v8t" id="vWz-4a-AI7"/>
+                <outlet property="femalePercentage" destination="nAj-Qx-iQv" id="6L9-Ea-Deg"/>
+                <outlet property="maleIconView" destination="8tt-Lh-4s2" id="kDc-uj-bRN"/>
+                <outlet property="malePercentage" destination="8LH-vw-PxD" id="r31-ww-FHg"/>
+                <outlet property="startListeningButton" destination="XPf-p3-6mI" id="FXY-Zf-N3N"/>
+                <outlet property="view" destination="iN0-l3-epB" id="7x9-5I-2E8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eUv-Mh-jK1">
+                    <rect key="frame" x="0.0" y="224" width="375" height="220"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPf-p3-6mI" customClass="RoundedButton" customModule="Speaker_Recognizer" customModuleProvider="target">
+                            <rect key="frame" x="139" y="80" width="96" height="30"/>
+                            <state key="normal" title="Start listening"/>
+                            <connections>
+                                <action selector="onStartListeningButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="rbf-MZ-AYm"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="XPf-p3-6mI" firstAttribute="centerX" secondItem="eUv-Mh-jK1" secondAttribute="centerX" id="GXT-Gf-SA4"/>
+                        <constraint firstItem="XPf-p3-6mI" firstAttribute="top" secondItem="eUv-Mh-jK1" secondAttribute="top" constant="80" id="uOs-8O-mhZ"/>
+                        <constraint firstAttribute="height" constant="220" id="xyJ-t5-jgg"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="female" translatesAutoresizingMaskIntoConstraints="NO" id="hwG-Qs-v8t">
+                    <rect key="frame" x="15" y="273" width="80" height="115"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="115" id="BUA-6U-9cT"/>
+                        <constraint firstAttribute="width" constant="80" id="mww-od-Y9P"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="male" translatesAutoresizingMaskIntoConstraints="NO" id="8tt-Lh-4s2">
+                    <rect key="frame" x="280" y="294" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="Bgt-kF-W8c"/>
+                        <constraint firstAttribute="height" constant="80" id="FsB-tV-7Ns"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAj-Qx-iQv">
+                    <rect key="frame" x="29" y="323" width="52" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LH-vw-PxD">
+                    <rect key="frame" x="294" y="323" width="52" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.14901960784313725" green="0.31916257484537441" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="hwG-Qs-v8t" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-3" id="50C-ah-77L"/>
+                <constraint firstItem="hwG-Qs-v8t" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="8QW-Lh-BHT"/>
+                <constraint firstItem="eUv-Mh-jK1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="KHx-4Z-K7d"/>
+                <constraint firstItem="eUv-Mh-jK1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ski-xv-h3H"/>
+                <constraint firstAttribute="trailing" secondItem="8tt-Lh-4s2" secondAttribute="trailing" constant="15" id="XXu-PO-7gP"/>
+                <constraint firstAttribute="trailing" secondItem="eUv-Mh-jK1" secondAttribute="trailing" id="Y9Q-QW-ZNR"/>
+                <constraint firstItem="8tt-Lh-4s2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="abp-lh-Av9"/>
+                <constraint firstItem="hwG-Qs-v8t" firstAttribute="top" secondItem="eUv-Mh-jK1" secondAttribute="top" id="yza-fC-ar1"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="yza-fC-ar1"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="424.5" y="459.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="female" width="547" height="786"/>
+        <image name="male" width="547" height="544"/>
+    </resources>
+</document>
